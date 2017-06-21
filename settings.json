@@ -1,0 +1,6 @@
+{
+	"devMode": true,
+	"mainFile": "app/main.js",
+	"winWidth": 1000,
+	"winHeight": 800
+}
