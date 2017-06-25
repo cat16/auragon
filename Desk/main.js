@@ -10,7 +10,7 @@ function start() {
 	win = new BrowserWindow({
 		width: settings.winWidth,
 		height: settings.winHeight,
-		frame: false,
+		frame: settings.winFrame,
 		show: false
 	})
 
@@ -18,20 +18,9 @@ function start() {
 		win.show();
 	});
 
-	let desk_modules = "";
-
-	let files = require('fs').readdirSync("./desk_modules");
-	for (let file of files) {
-		if (file.endsWith(".js")) {
-			desk_modules += "global." + file.slice(0, -3) + " = require(path + '/desk_modules/" + file + "');";
-		}
-	}
-
-	win.loadURL('data:text/html,<html><body></body><script>' +
+	win.loadURL('data:text/html,<html><body style = "-webkit-user-select: none;"></body><script>' +
 		"let path = require('electron').remote.app.getAppPath();" +
-		"global.settings = require(path+'/settings.json');" +
-		desk_modules +
-		"require(path+'/"+settings.mainFile+"');" +
+		`require(path+'/${settings.mainFile}');` +
 		'</script></html>');
 	
 	if(settings.devMode)

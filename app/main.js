@@ -1,6 +1,4 @@
-let electron = require('electron');
-global.Game = require('./Game.js');
-global.BrowserWindow = electron.remote.BrowserWindow;
-
+let Game = require("./Game.js");
 let game = new Game();
+
 game.start();

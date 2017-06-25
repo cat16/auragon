@@ -14,7 +14,7 @@
             "name": "Launch Electron App",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/main.js",
+            "program": "${workspaceRoot}/Desk/main.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
