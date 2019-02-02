@@ -1,5 +1,5 @@
 const EventEmitter = require('events');
-const Desk = require('Desk');
+const Desk = require('../Desk');
 const BrowserWindow = require('electron').remote.BrowserWindow;
 
 global.GameStates = {

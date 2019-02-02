@@ -1,4 +1,4 @@
-const Desk = require('Desk.js');
+const Desk = require('../Desk.js');
 const Board = Desk.Board;
 const BrowserWindow = require('electron').remote.BrowserWindow;
 
