@@ -1,5 +1,8 @@
 {
-  "name": "Auragon",
-  "version": "Pre-Alpha",
-  "main": "Desk/main.js"
+  "name": "auragon",
+  "version": "0.0.1",
+  "main": "Desk/main.js",
+  "dependencies": {
+    "electron": "^4.0.3"
+  }
 }
